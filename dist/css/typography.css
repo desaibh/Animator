@@ -1,0 +1,64 @@
+/* ------------------------------------------ */
+/* RESETS, PAGE SETUP, TYPOGRAPHY             */
+/* ------------------------------------------ */
+.embolden {
+  font-weight: bold;
+  color: #333;
+}
+.nowrap {
+  white-space: nowrap;
+}
+.clear {
+  clear: both;
+}
+h1 {
+  font-family: monospace;
+  color: #333;
+  font-size: 32px;
+}
+.formSubmit {
+	background-color: #333;
+	color: white;
+	font-size: 18px;
+	margin: .5% 1%;
+	height: 50px;
+	width: 140px;
+	float: none;
+	border-radius: 25px;
+				-moz-border-radius: 25px;
+				-webkit-border-radius: 25px;
+}
+button {
+	border: none;
+	color: #fff;
+  background: black;
+  font-family: monospace;
+  font-size: 12px;
+	width: 8%;
+	margin: 2.5em 1%;
+}
+#registration-links {
+	position: fixed;
+  top: 1px;
+  right: 1px;
+	width: 100%;
+	max-width: 900px;
+	max-height: 20px;
+	text-align: right;
+}
+#closeButton {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+.saveButton {
+  width: 6%;
+  height: 20px;
+  margin: 4px 0px;
+  background:black;
+  position: absolute;
+  right: 7px;
+}
+.clearboth {
+	clear: both;
+}

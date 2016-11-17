@@ -1,0 +1,47 @@
+/* ------------------------------------------ */
+/* FORM FIELDS                                */
+/* ------------------------------------------ */
+form {
+  border: 1px grey solid;
+  padding; 20px;
+  width: 20%
+}
+label {
+  display: block;
+  width: 100%
+}
+label .radiobutton, label .optionbutton {
+  display: inline;
+  margin-left: 10px;
+}
+input[type="radio"]:checked ~ .reveal-if-active {
+  opacity: 1;
+  max-height: 100px;
+  overflow: visible;
+}
+button, html [type=button], [type=reset], [type=submit] {
+    -webkit-appearance: button;
+}
+.reveal-if-active {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+.teal, .teal:hover {
+    color: #fff!important;
+    background-color: #009688!important;
+}
+.grey, .grey:hover {
+    color: #757575!important;
+    font-family: monospace;
+}
+#formdisplay form {
+  border: 0px;
+}
+form .formContainer {
+  display: table;
+  clear: both;
+  border: none;
+}
+.forminput {
+    padding: 8px 16px!important;
