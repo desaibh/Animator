@@ -142,35 +142,40 @@ class Background extends React.Component {
         </label>
         <label>
           <span className="span4"><b>Position:</b></span><br />
-          <input type="radio" name="choice-position" id="percent" onChange={this.onChangeHandler}/>
-          <label htmlFor="percent" className="radiobutton">Percent:</label>
-          <div className="reveal-if-active">
-            <div className="nowrap">
-              <span><em>Horizontal</em></span>
-              <input type="number" min="1" max="100" name="hpercent" onChange={this.onChangeHandler} />
-            </div>
-            <div className="nowrap">
-              <span><em>Vertical</em></span>
-              <input type="number" min="1" max="100" name="vpercent" onChange={this.onChangeHandler} />
-            </div>
-          </div>
-          <input type="radio" name="choice-position" id="pixel" onChange={this.onChangeHandler}/>
-          <label htmlFor="pixel" className="radiobutton">Pixels:</label>
-          <div className="reveal-if-active">
-            <div className="nowrap">
-              <span><em>Horizontal</em></span>
-              <input type="number" min="0" name="hpixels" onChange={this.onChangeHandler} />
-            </div>
-            <div className="nowrap">
-              <span><em>Vertical</em></span>
-              <input type="number" min="0" name="vpixels" onChange={this.onChangeHandler} />
+          <div>
+            <input type="radio" name="choice-position" id="percent" onChange={this.onChangeHandler}/>
+            <label htmlFor="percent" className="radiobutton">Percent:</label>
+            <div className="reveal-if-active">
+              <div className="nowrap">
+                <span><em>Horizontal</em></span>
+                <input type="number" min="1" max="100" name="hpercent" onChange={this.onChangeHandler} />
+              </div>
+              <div className="nowrap">
+                <span><em>Vertical</em></span>
+                <input type="number" min="1" max="100" name="vpercent" onChange={this.onChangeHandler} />
+              </div>
             </div>
           </div>
-          <input type="radio" name="choice-position" id="keyword2" onChange={this.onChangeHandler} />
-          <label htmlFor="keyword2" className="radiobutton">Keyword:</label>
-          <div className="reveal-if-active" >
-            <span><em>Position:</em></span>
-            <input list="keywordposition" name="keywordposition" onChange={this.onChangeHandler} />
+          <div>
+            <input type="radio" name="choice-position" id="pixel" onChange={this.onChangeHandler}/>
+            <label htmlFor="pixel" className="radiobutton">Pixels:</label>
+            <div className="reveal-if-active">
+              <div className="nowrap">
+                <span><em>Horizontal</em></span>
+                <input type="number" min="0" name="hpixels" onChange={this.onChangeHandler} />
+              </div>
+              <div className="nowrap">
+                <span><em>Vertical</em></span>
+                <input type="number" min="0" name="vpixels" onChange={this.onChangeHandler} />
+              </div>
+            </div>
+          </div>
+          <div>
+            <input type="radio" name="choice-position" id="keyword2" onChange={this.onChangeHandler} />
+            <label htmlFor="keyword2" className="radiobutton">Keyword:</label>
+            <div className="reveal-if-active" >
+              <span><em>Position:</em></span>
+              <input list="keywordposition" name="keywordposition" onChange={this.onChangeHandler} />
               <datalist id="keywordposition">
                 <option value="left top">left top</option>
                 <option value="left center">left center</option>
@@ -182,34 +187,43 @@ class Background extends React.Component {
                 <option value="center center">center center</option>
                 <option value="center bottom">center bottom</option>
               </datalist>
+            </div>
           </div>
-          <input type="radio" name="choice-position" id="nopos" onChange={this.onChangeHandler} />
-          <label htmlFor="nopos" className="radiobutton">None</label>
+          <div>
+            <input type="radio" name="choice-position" id="nopos" onChange={this.onChangeHandler} />
+            <label htmlFor="nopos" className="radiobutton">None</label>
+          </div>
         </label>
         <label>
           <span className="span4"><b>Size:</b> </span><br />
-          <input type="radio" name="choice-size" id="pixels2" onChange={this.onChangeHandler}/>
-          <label htmlFor="pixels2" className="radiobutton">Pixels:</label>
-          <div className="reveal-if-active" >
-            <div className="nowrap">
-              <em>Width:</em> <input type="number" min="0" name="widthpx"  onChange={this.onChangeHandler}/> <br />
-              <em>Height:</em> <input type="number" min="0" name="heightpx"  onChange={this.onChangeHandler}/>
+          <div>
+            <input type="radio" name="choice-size" id="pixels2" onChange={this.onChangeHandler}/>
+            <label htmlFor="pixels2" className="radiobutton">Pixels:</label>
+            <div className="reveal-if-active" >
+              <div className="nowrap">
+                <em>Width:</em> <input type="number" min="0" name="widthpx"  onChange={this.onChangeHandler}/> <br />
+                <em>Height:</em> <input type="number" min="0" name="heightpx"  onChange={this.onChangeHandler}/>
+              </div>
             </div>
           </div>
-          <input type="radio" name="choice-size" id="keyword3" onChange={this.onChangeHandler}/>
-          <label htmlFor="keyword3" className="radiobutton">Keyword:</label>
-          <div className="reveal-if-active" >
-            <span><em>Position:</em></span>
-            <input list="keywordsize" name="keywordsize"  onChange={this.onChangeHandler} />
+          <div>
+            <input type="radio" name="choice-size" id="keyword3" onChange={this.onChangeHandler}/>
+            <label htmlFor="keyword3" className="radiobutton">Keyword:</label>
+            <div className="reveal-if-active" >
+              <span><em>Position:</em></span>
+              <input list="keywordsize" name="keywordsize"  onChange={this.onChangeHandler} />
               <datalist id="keywordsize">
                 <option value="auto">auto</option>
                 <option value="cover">cover</option>
                 <option value="contain">contain</option>
                 <option value="initial">initial</option>
               </datalist>
+            </div>
           </div>
-          <input type="radio" name="choice-size" id="nosize" onChange={this.onChangeHandler} />
-          <label htmlFor="nosize" className="radiobutton">None</label>
+          <div>
+            <input type="radio" name="choice-size" id="nosize" onChange={this.onChangeHandler} />
+            <label htmlFor="nosize" className="radiobutton">None</label>
+          </div>
         </label>
         <label>
           <span className="span4"><b>Repeat:</b> </span>
@@ -268,7 +282,7 @@ class Background extends React.Component {
         </label> */}
         <label>
           <span className="span4"><b>Attachment:</b> </span>
-          <input list="attachment" name="attachment"  onChange={this.onChangeHandler} />
+          <input list="attachment" name="attachment" onChange={this.onChangeHandler} />
           <datalist id="attachment">
             <option value="scroll">scroll</option>
             <option value="fixed">fixed</option>

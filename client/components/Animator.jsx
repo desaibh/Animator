@@ -135,6 +135,9 @@ class Animator extends React.Component {
   closePainting() {
     this.setState  ({ open: false })
   }
+  handleSubmit() {
+
+  }
   render() {
     const onehundred = 100;
     console.log(this.state.cssKeys)
