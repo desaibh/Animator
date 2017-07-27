@@ -40,12 +40,12 @@ class Typography extends React.Component {
       if (e.target.name == 'textColor') {
         this.forceUpdate('textColor', e.target.value);
       }
-      if (e.target.name == 'textDirection') {
-        this.forceUpdate('textDirection', e.target.value);
+      if (e.target.name == 'textAlignment') {
+        this.forceUpdate('textAlignment', e.target.value);
       }
       if (e.target.name == 'letterspacing') {
         let letterSpacing = e.target.value;
-        this.forceUpdate('letterSpacing', letterSpacing);
+        this.forceUpdate('letter-spacing', letterSpacing);
       }
       if (e.target.name == 'lineheightpx') {
         let lineHeight = e.target.value + 'px';
@@ -127,12 +127,15 @@ class Typography extends React.Component {
           <input type="color" name="textColor" id="textColor" onChange={this.onChangeHandler} />
         </label>
         <label>
-          <span className="span4"><b>Text Direction:</b> </span>
-          <input list="textDirection" name="textDirection"  onChange={this.onChangeHandler} />
-          <datalist id="textDirection">
-          <option value="rtl">right to left</option>
-          <option value="ltr">left to right</option>
+          <span className="span4"><b>Text Alignment:</b> </span>
+          <input list="textAlignment" name="textAlignment"  onChange={this.onChangeHandler} />
+          <datalist id="textAlignment">
+          <option value="right">right</option>
+          <option value="left">left</option>
+          <option value="center">center</option>
+          <option value="justify">justify</option>
           <option value="initial">initial</option>
+          <option value="inherit">inherit</option>
           <option value="none">none</option>
           </datalist>
         </label>

@@ -25965,6 +25965,9 @@
 	      this.setState({ open: false });
 	    }
 	  }, {
+	    key: 'handleSubmit',
+	    value: function handleSubmit() {}
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      var onehundred = 100;
@@ -26627,156 +26630,172 @@
 	            )
 	          ),
 	          _react2.default.createElement('br', null),
-	          _react2.default.createElement('input', { type: 'radio', name: 'choice-position', id: 'percent', onChange: this.onChangeHandler }),
-	          _react2.default.createElement(
-	            'label',
-	            { htmlFor: 'percent', className: 'radiobutton' },
-	            'Percent:'
-	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'reveal-if-active' },
+	            null,
+	            _react2.default.createElement('input', { type: 'radio', name: 'choice-position', id: 'percent', onChange: this.onChangeHandler }),
 	            _react2.default.createElement(
-	              'div',
-	              { className: 'nowrap' },
-	              _react2.default.createElement(
-	                'span',
-	                null,
-	                _react2.default.createElement(
-	                  'em',
-	                  null,
-	                  'Horizontal'
-	                )
-	              ),
-	              _react2.default.createElement('input', { type: 'number', min: '1', max: '100', name: 'hpercent', onChange: this.onChangeHandler })
+	              'label',
+	              { htmlFor: 'percent', className: 'radiobutton' },
+	              'Percent:'
 	            ),
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'nowrap' },
+	              { className: 'reveal-if-active' },
 	              _react2.default.createElement(
-	                'span',
-	                null,
+	                'div',
+	                { className: 'nowrap' },
 	                _react2.default.createElement(
-	                  'em',
+	                  'span',
 	                  null,
-	                  'Vertical'
-	                )
+	                  _react2.default.createElement(
+	                    'em',
+	                    null,
+	                    'Horizontal'
+	                  )
+	                ),
+	                _react2.default.createElement('input', { type: 'number', min: '1', max: '100', name: 'hpercent', onChange: this.onChangeHandler })
 	              ),
-	              _react2.default.createElement('input', { type: 'number', min: '1', max: '100', name: 'vpercent', onChange: this.onChangeHandler })
-	            )
-	          ),
-	          _react2.default.createElement('input', { type: 'radio', name: 'choice-position', id: 'pixel', onChange: this.onChangeHandler }),
-	          _react2.default.createElement(
-	            'label',
-	            { htmlFor: 'pixel', className: 'radiobutton' },
-	            'Pixels:'
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'reveal-if-active' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'nowrap' },
 	              _react2.default.createElement(
-	                'span',
-	                null,
+	                'div',
+	                { className: 'nowrap' },
 	                _react2.default.createElement(
-	                  'em',
+	                  'span',
 	                  null,
-	                  'Horizontal'
-	                )
-	              ),
-	              _react2.default.createElement('input', { type: 'number', min: '0', name: 'hpixels', onChange: this.onChangeHandler })
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'nowrap' },
-	              _react2.default.createElement(
-	                'span',
-	                null,
-	                _react2.default.createElement(
-	                  'em',
-	                  null,
-	                  'Vertical'
-	                )
-	              ),
-	              _react2.default.createElement('input', { type: 'number', min: '0', name: 'vpixels', onChange: this.onChangeHandler })
-	            )
-	          ),
-	          _react2.default.createElement('input', { type: 'radio', name: 'choice-position', id: 'keyword2', onChange: this.onChangeHandler }),
-	          _react2.default.createElement(
-	            'label',
-	            { htmlFor: 'keyword2', className: 'radiobutton' },
-	            'Keyword:'
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'reveal-if-active' },
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              _react2.default.createElement(
-	                'em',
-	                null,
-	                'Position:'
-	              )
-	            ),
-	            _react2.default.createElement('input', { list: 'keywordposition', name: 'keywordposition', onChange: this.onChangeHandler }),
-	            _react2.default.createElement(
-	              'datalist',
-	              { id: 'keywordposition' },
-	              _react2.default.createElement(
-	                'option',
-	                { value: 'left top' },
-	                'left top'
-	              ),
-	              _react2.default.createElement(
-	                'option',
-	                { value: 'left center' },
-	                'left center'
-	              ),
-	              _react2.default.createElement(
-	                'option',
-	                { value: 'left bottom' },
-	                'left bottom'
-	              ),
-	              _react2.default.createElement(
-	                'option',
-	                { value: 'right top' },
-	                'right top'
-	              ),
-	              _react2.default.createElement(
-	                'option',
-	                { value: 'right center' },
-	                'right center'
-	              ),
-	              _react2.default.createElement(
-	                'option',
-	                { value: 'right bottom' },
-	                'right bottom'
-	              ),
-	              _react2.default.createElement(
-	                'option',
-	                { value: 'center top' },
-	                'center top'
-	              ),
-	              _react2.default.createElement(
-	                'option',
-	                { value: 'center center' },
-	                'center center'
-	              ),
-	              _react2.default.createElement(
-	                'option',
-	                { value: 'center bottom' },
-	                'center bottom'
+	                  _react2.default.createElement(
+	                    'em',
+	                    null,
+	                    'Vertical'
+	                  )
+	                ),
+	                _react2.default.createElement('input', { type: 'number', min: '1', max: '100', name: 'vpercent', onChange: this.onChangeHandler })
 	              )
 	            )
 	          ),
-	          _react2.default.createElement('input', { type: 'radio', name: 'choice-position', id: 'nopos', onChange: this.onChangeHandler }),
 	          _react2.default.createElement(
-	            'label',
-	            { htmlFor: 'nopos', className: 'radiobutton' },
-	            'None'
+	            'div',
+	            null,
+	            _react2.default.createElement('input', { type: 'radio', name: 'choice-position', id: 'pixel', onChange: this.onChangeHandler }),
+	            _react2.default.createElement(
+	              'label',
+	              { htmlFor: 'pixel', className: 'radiobutton' },
+	              'Pixels:'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'reveal-if-active' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'nowrap' },
+	                _react2.default.createElement(
+	                  'span',
+	                  null,
+	                  _react2.default.createElement(
+	                    'em',
+	                    null,
+	                    'Horizontal'
+	                  )
+	                ),
+	                _react2.default.createElement('input', { type: 'number', min: '0', name: 'hpixels', onChange: this.onChangeHandler })
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'nowrap' },
+	                _react2.default.createElement(
+	                  'span',
+	                  null,
+	                  _react2.default.createElement(
+	                    'em',
+	                    null,
+	                    'Vertical'
+	                  )
+	                ),
+	                _react2.default.createElement('input', { type: 'number', min: '0', name: 'vpixels', onChange: this.onChangeHandler })
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement('input', { type: 'radio', name: 'choice-position', id: 'keyword2', onChange: this.onChangeHandler }),
+	            _react2.default.createElement(
+	              'label',
+	              { htmlFor: 'keyword2', className: 'radiobutton' },
+	              'Keyword:'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'reveal-if-active' },
+	              _react2.default.createElement(
+	                'span',
+	                null,
+	                _react2.default.createElement(
+	                  'em',
+	                  null,
+	                  'Position:'
+	                )
+	              ),
+	              _react2.default.createElement('input', { list: 'keywordposition', name: 'keywordposition', onChange: this.onChangeHandler }),
+	              _react2.default.createElement(
+	                'datalist',
+	                { id: 'keywordposition' },
+	                _react2.default.createElement(
+	                  'option',
+	                  { value: 'left top' },
+	                  'left top'
+	                ),
+	                _react2.default.createElement(
+	                  'option',
+	                  { value: 'left center' },
+	                  'left center'
+	                ),
+	                _react2.default.createElement(
+	                  'option',
+	                  { value: 'left bottom' },
+	                  'left bottom'
+	                ),
+	                _react2.default.createElement(
+	                  'option',
+	                  { value: 'right top' },
+	                  'right top'
+	                ),
+	                _react2.default.createElement(
+	                  'option',
+	                  { value: 'right center' },
+	                  'right center'
+	                ),
+	                _react2.default.createElement(
+	                  'option',
+	                  { value: 'right bottom' },
+	                  'right bottom'
+	                ),
+	                _react2.default.createElement(
+	                  'option',
+	                  { value: 'center top' },
+	                  'center top'
+	                ),
+	                _react2.default.createElement(
+	                  'option',
+	                  { value: 'center center' },
+	                  'center center'
+	                ),
+	                _react2.default.createElement(
+	                  'option',
+	                  { value: 'center bottom' },
+	                  'center bottom'
+	                )
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement('input', { type: 'radio', name: 'choice-position', id: 'nopos', onChange: this.onChangeHandler }),
+	            _react2.default.createElement(
+	              'label',
+	              { htmlFor: 'nopos', className: 'radiobutton' },
+	              'None'
+	            )
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -26793,85 +26812,97 @@
 	            ' '
 	          ),
 	          _react2.default.createElement('br', null),
-	          _react2.default.createElement('input', { type: 'radio', name: 'choice-size', id: 'pixels2', onChange: this.onChangeHandler }),
-	          _react2.default.createElement(
-	            'label',
-	            { htmlFor: 'pixels2', className: 'radiobutton' },
-	            'Pixels:'
-	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'reveal-if-active' },
+	            null,
+	            _react2.default.createElement('input', { type: 'radio', name: 'choice-size', id: 'pixels2', onChange: this.onChangeHandler }),
+	            _react2.default.createElement(
+	              'label',
+	              { htmlFor: 'pixels2', className: 'radiobutton' },
+	              'Pixels:'
+	            ),
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'nowrap' },
+	              { className: 'reveal-if-active' },
 	              _react2.default.createElement(
-	                'em',
-	                null,
-	                'Width:'
-	              ),
-	              ' ',
-	              _react2.default.createElement('input', { type: 'number', min: '0', name: 'widthpx', onChange: this.onChangeHandler }),
-	              ' ',
-	              _react2.default.createElement('br', null),
-	              _react2.default.createElement(
-	                'em',
-	                null,
-	                'Height:'
-	              ),
-	              ' ',
-	              _react2.default.createElement('input', { type: 'number', min: '0', name: 'heightpx', onChange: this.onChangeHandler })
+	                'div',
+	                { className: 'nowrap' },
+	                _react2.default.createElement(
+	                  'em',
+	                  null,
+	                  'Width:'
+	                ),
+	                ' ',
+	                _react2.default.createElement('input', { type: 'number', min: '0', name: 'widthpx', onChange: this.onChangeHandler }),
+	                ' ',
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement(
+	                  'em',
+	                  null,
+	                  'Height:'
+	                ),
+	                ' ',
+	                _react2.default.createElement('input', { type: 'number', min: '0', name: 'heightpx', onChange: this.onChangeHandler })
+	              )
 	            )
-	          ),
-	          _react2.default.createElement('input', { type: 'radio', name: 'choice-size', id: 'keyword3', onChange: this.onChangeHandler }),
-	          _react2.default.createElement(
-	            'label',
-	            { htmlFor: 'keyword3', className: 'radiobutton' },
-	            'Keyword:'
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'reveal-if-active' },
+	            null,
+	            _react2.default.createElement('input', { type: 'radio', name: 'choice-size', id: 'keyword3', onChange: this.onChangeHandler }),
 	            _react2.default.createElement(
-	              'span',
-	              null,
-	              _react2.default.createElement(
-	                'em',
-	                null,
-	                'Position:'
-	              )
+	              'label',
+	              { htmlFor: 'keyword3', className: 'radiobutton' },
+	              'Keyword:'
 	            ),
-	            _react2.default.createElement('input', { list: 'keywordsize', name: 'keywordsize', onChange: this.onChangeHandler }),
 	            _react2.default.createElement(
-	              'datalist',
-	              { id: 'keywordsize' },
+	              'div',
+	              { className: 'reveal-if-active' },
 	              _react2.default.createElement(
-	                'option',
-	                { value: 'auto' },
-	                'auto'
+	                'span',
+	                null,
+	                _react2.default.createElement(
+	                  'em',
+	                  null,
+	                  'Position:'
+	                )
 	              ),
+	              _react2.default.createElement('input', { list: 'keywordsize', name: 'keywordsize', onChange: this.onChangeHandler }),
 	              _react2.default.createElement(
-	                'option',
-	                { value: 'cover' },
-	                'cover'
-	              ),
-	              _react2.default.createElement(
-	                'option',
-	                { value: 'contain' },
-	                'contain'
-	              ),
-	              _react2.default.createElement(
-	                'option',
-	                { value: 'initial' },
-	                'initial'
+	                'datalist',
+	                { id: 'keywordsize' },
+	                _react2.default.createElement(
+	                  'option',
+	                  { value: 'auto' },
+	                  'auto'
+	                ),
+	                _react2.default.createElement(
+	                  'option',
+	                  { value: 'cover' },
+	                  'cover'
+	                ),
+	                _react2.default.createElement(
+	                  'option',
+	                  { value: 'contain' },
+	                  'contain'
+	                ),
+	                _react2.default.createElement(
+	                  'option',
+	                  { value: 'initial' },
+	                  'initial'
+	                )
 	              )
 	            )
 	          ),
-	          _react2.default.createElement('input', { type: 'radio', name: 'choice-size', id: 'nosize', onChange: this.onChangeHandler }),
 	          _react2.default.createElement(
-	            'label',
-	            { htmlFor: 'nosize', className: 'radiobutton' },
-	            'None'
+	            'div',
+	            null,
+	            _react2.default.createElement('input', { type: 'radio', name: 'choice-size', id: 'nosize', onChange: this.onChangeHandler }),
+	            _react2.default.createElement(
+	              'label',
+	              { htmlFor: 'nosize', className: 'radiobutton' },
+	              'None'
+	            )
 	          )
 	        ),
 	        _react2.default.createElement(

@@ -24,6 +24,7 @@ class Animator extends React.Component {
       cssKeys: [],
       cssStyles: {},
       background: '',
+      backgroundColor: '',
       backgroundImage: '',
       backgroundPosition: '',
       backgroundSize: '',
@@ -32,7 +33,7 @@ class Animator extends React.Component {
       backgroundOpacity: '',
       text: 'Hello World!',
       textColor: '',
-      textDirection: '',
+      textAlignment: '',
       textAlign: '',
       textIndent: '',
       textShadow: '',
@@ -52,8 +53,12 @@ class Animator extends React.Component {
     this.render();
   }
   saveChoice(cssKey, cssValue) {
+    console.log(cssKey, cssValue)
     if (cssKey ==  'background') {
       this.setState({ background: cssValue });
+    }
+    if (cssKey ==  'backgroundColor') {
+      this.setState({ backgroundColor: cssValue });
     }
     if (cssKey ==  'backgroundImage') {
       this.setState({backgroundImage: cssValue});
@@ -72,9 +77,6 @@ class Animator extends React.Component {
     }
     if (cssKey ==  'textColor') {
       this.setState({textColor: cssValue});
-    }
-    if (cssKey ==  'textDirection') {
-      this.setState({textDirection: cssValue});
     }
     if (cssKey ==  'textAlign') {
       this.setState({textAlign: cssValue});
@@ -170,8 +172,8 @@ class Animator extends React.Component {
           <div id ="contentView">
             <StyleSheet
               cssKeys = {this.state.cssKeys}
-              background={this.state.background}
-              backgroundPosition={this.state.backgroundPosition}
+              background={this.state.backgroundColor}
+v              backgroundPosition={this.state.backgroundPosition}
               backgroundSize={this.state.backgroundSize}
               backgroundImage={this.state.backgroundImage}
               backgroundBorder={this.state.backgroundBorder}

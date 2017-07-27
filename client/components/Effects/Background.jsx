@@ -38,6 +38,7 @@ class Background extends React.Component {
       let bg = this.state.background || ' ';
       if (e.target.name == 'color') {
         this.setState({color: e.target.value});
+        this.forceUpdate('backgroundColor', e.target.value)
       }
       if (e.target.name == 'image') {
         let image = `url('${e.target.value}')`;
@@ -176,17 +177,17 @@ class Background extends React.Component {
             <div className="reveal-if-active" >
               <span><em>Position:</em></span>
               <input list="keywordposition" name="keywordposition" onChange={this.onChangeHandler} />
-              <datalist id="keywordposition">
-                <option value="left top">left top</option>
-                <option value="left center">left center</option>
-                <option value="left bottom">left bottom</option>
-                <option value="right top">right top</option>
-                <option value="right center">right center</option>
-                <option value="right bottom">right bottom</option>
-                <option value="center top">center top</option>
-                <option value="center center">center center</option>
-                <option value="center bottom">center bottom</option>
-              </datalist>
+                <datalist id="keywordposition">
+                  <option value="left top">left top</option>
+                  <option value="left center">left center</option>
+                  <option value="left bottom">left bottom</option>
+                  <option value="right top">right top</option>
+                  <option value="right center">right center</option>
+                  <option value="right bottom">right bottom</option>
+                  <option value="center top">center top</option>
+                  <option value="center center">center center</option>
+                  <option value="center bottom">center bottom</option>
+                </datalist>
             </div>
           </div>
           <div>
@@ -212,12 +213,12 @@ class Background extends React.Component {
             <div className="reveal-if-active" >
               <span><em>Position:</em></span>
               <input list="keywordsize" name="keywordsize"  onChange={this.onChangeHandler} />
-              <datalist id="keywordsize">
-                <option value="auto">auto</option>
-                <option value="cover">cover</option>
-                <option value="contain">contain</option>
-                <option value="initial">initial</option>
-              </datalist>
+                <datalist id="keywordsize">
+                  <option value="auto">auto</option>
+                  <option value="cover">cover</option>
+                  <option value="contain">contain</option>
+                  <option value="initial">initial</option>
+                </datalist>
             </div>
           </div>
           <div>
@@ -282,7 +283,7 @@ class Background extends React.Component {
         </label> */}
         <label>
           <span className="span4"><b>Attachment:</b> </span>
-          <input list="attachment" name="attachment" onChange={this.onChangeHandler} />
+          <input list="attachment" name="attachment"  onChange={this.onChangeHandler} />
           <datalist id="attachment">
             <option value="scroll">scroll</option>
             <option value="fixed">fixed</option>
