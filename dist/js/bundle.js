@@ -25843,6 +25843,7 @@
 	      cssKeys: [],
 	      cssStyles: {},
 	      background: '',
+	      backgroundColor: '',
 	      backgroundImage: '',
 	      backgroundPosition: '',
 	      backgroundSize: '',
@@ -25851,7 +25852,7 @@
 	      backgroundOpacity: '',
 	      text: 'Hello World!',
 	      textColor: '',
-	      textDirection: '',
+	      textAlignment: '',
 	      textAlign: '',
 	      textIndent: '',
 	      textShadow: '',
@@ -25877,8 +25878,12 @@
 	  }, {
 	    key: 'saveChoice',
 	    value: function saveChoice(cssKey, cssValue) {
+	      console.log(cssKey, cssValue);
 	      if (cssKey == 'background') {
 	        this.setState({ background: cssValue });
+	      }
+	      if (cssKey == 'backgroundColor') {
+	        this.setState({ backgroundColor: cssValue });
 	      }
 	      if (cssKey == 'backgroundImage') {
 	        this.setState({ backgroundImage: cssValue });
@@ -25897,9 +25902,6 @@
 	      }
 	      if (cssKey == 'textColor') {
 	        this.setState({ textColor: cssValue });
-	      }
-	      if (cssKey == 'textDirection') {
-	        this.setState({ textDirection: cssValue });
 	      }
 	      if (cssKey == 'textAlign') {
 	        this.setState({ textAlign: cssValue });
@@ -25997,8 +25999,8 @@
 	            { id: 'contentView' },
 	            _react2.default.createElement(_StyleSheet2.default, {
 	              cssKeys: this.state.cssKeys,
-	              background: this.state.background,
-	              backgroundPosition: this.state.backgroundPosition,
+	              background: this.state.backgroundColor,
+	              v: true, backgroundPosition: this.state.backgroundPosition,
 	              backgroundSize: this.state.backgroundSize,
 	              backgroundImage: this.state.backgroundImage,
 	              backgroundBorder: this.state.backgroundBorder,
@@ -26491,6 +26493,7 @@
 	        var bg = this.state.background || ' ';
 	        if (e.target.name == 'color') {
 	          this.setState({ color: e.target.value });
+	          this.forceUpdate('backgroundColor', e.target.value);
 	        }
 	        if (e.target.name == 'image') {
 	          var image = 'url(\'' + e.target.value + '\')';
@@ -27695,12 +27698,12 @@
 	        if (e.target.name == 'textColor') {
 	          this.forceUpdate('textColor', e.target.value);
 	        }
-	        if (e.target.name == 'textDirection') {
-	          this.forceUpdate('textDirection', e.target.value);
+	        if (e.target.name == 'textAlignment') {
+	          this.forceUpdate('textAlignment', e.target.value);
 	        }
 	        if (e.target.name == 'letterspacing') {
 	          var letterSpacing = e.target.value;
-	          this.forceUpdate('letterSpacing', letterSpacing);
+	          this.forceUpdate('letter-spacing', letterSpacing);
 	        }
 	        if (e.target.name == 'lineheightpx') {
 	          var lineHeight = e.target.value + 'px';
@@ -27815,28 +27818,43 @@
 	            _react2.default.createElement(
 	              'b',
 	              null,
-	              'Text Direction:'
+	              'Text Alignment:'
 	            ),
 	            ' '
 	          ),
-	          _react2.default.createElement('input', { list: 'textDirection', name: 'textDirection', onChange: this.onChangeHandler }),
+	          _react2.default.createElement('input', { list: 'textAlignment', name: 'textAlignment', onChange: this.onChangeHandler }),
 	          _react2.default.createElement(
 	            'datalist',
-	            { id: 'textDirection' },
+	            { id: 'textAlignment' },
 	            _react2.default.createElement(
 	              'option',
-	              { value: 'rtl' },
-	              'right to left'
+	              { value: 'right' },
+	              'right'
 	            ),
 	            _react2.default.createElement(
 	              'option',
-	              { value: 'ltr' },
-	              'left to right'
+	              { value: 'left' },
+	              'left'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              { value: 'center' },
+	              'center'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              { value: 'justify' },
+	              'justify'
 	            ),
 	            _react2.default.createElement(
 	              'option',
 	              { value: 'initial' },
 	              'initial'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              { value: 'inherit' },
+	              'inherit'
 	            ),
 	            _react2.default.createElement(
 	              'option',
